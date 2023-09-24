@@ -1,0 +1,61 @@
+/* * {
+    border: 1px solid red;
+}
+ */
+
+.top-banner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #53565c;
+    width: 100%;
+    height: 75px;
+    padding: 20px;
+}
+
+.top-banner a {
+    text-decoration: none;
+    color: white;
+}
+
+
+.logged-in-buttons, .logged-out-buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap:10px;
+}
+
+
+.user-page-button, .logout-button, .login-button, .create-user-button, .saved-button, .add-new-gig-button {
+    height: 40px;
+    width: 90px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #74a3ed;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    min-width: fit-content;
+}
+
+
+.login-button {
+   display: flex;
+   width: 90px;
+   height: 40px;
+   font: 1em;
+}
+
+@media (max-width: 800px) {
+    .top-banner {
+        height: 60px;
+        position: fixed;
+        top: 0;
+    }
+
+    .logo, .login-buttons {
+        margin: 0 0 10px 0;
+    }
+}

@@ -1,0 +1,93 @@
+* {
+    /* border: 1px solid red; */
+    box-sizing: border-box;
+}
+
+
+/* parent element */
+.searchBar {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    gap: 30px;
+    background-color: #53565c;
+    color: white;
+    height: 70px;
+    border: 1px solid white;
+}
+
+
+/* options div */
+
+.options {
+    display:flex;
+    justify-content: space-between;
+    width: 50%;
+    gap: 15px;
+}
+.option {
+    display:flex;
+    align-items:center;
+    justify-content: space-around;
+    cursor:pointer;
+    width: fill;
+    height: 40px;
+    border-radius: 10px;
+    border: 1px solid white;
+}
+
+.selected {
+    background-color: #74a3ed;
+}
+
+
+/* input side */
+.input {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.input input {
+    font-size: 1em;
+}
+
+.input input, .search-button {
+    height: 40px;
+}
+
+.search-button {
+    background-color: #74a3ed;
+    display: flex;
+    align-items: center;
+    padding: 3%;
+    cursor: pointer;
+}
+
+
+@media (max-width: 800px) {
+    .searchBar {
+        margin-top: 60px;
+        display: flex;
+        flex-direction: column;
+        gap: 1px;
+        height: 100px;
+        align-items: center;
+        width: 100%;
+    }
+
+    .options {
+        width: 100%;
+        font-size: 0.8em;
+        gap: 0px;
+    }
+
+    /* .input {
+        width: 60%;
+        gap: 0;
+    } */
+
+
+}

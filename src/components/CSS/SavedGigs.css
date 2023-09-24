@@ -1,0 +1,23 @@
+/* CSS for a 3-column grid layout */
+.saved-gigs {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    max-width: 85%;
+    gap: 50px;
+    margin: auto;
+    /* background-color: #212121; */
+  }
+
+  .gig .venue_time {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  @media (max-width: 1200px) {
+    .saved-gigs {
+      margin: auto;
+      width: 80%;
+      grid-template-columns: 1fr 1fr; /* Change to 2 columns on screens with a max width of 768px */
+    }
+  }

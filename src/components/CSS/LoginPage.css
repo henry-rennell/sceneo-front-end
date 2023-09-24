@@ -1,0 +1,30 @@
+form {
+    min-height: 46vh;
+    height: fit-content;
+    background-color: #575656;
+    width: 40%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border:2px solid white;
+
+}
+
+.inputs {
+    margin-top: 60px;
+    font-size: 1.2em;
+}
+
+.logon-button {
+    background-color: #74a3ed;
+    height: 40px;
+    width: 90px;
+    display: flex;
+    align-items: center;
+    cursor:pointer;
+    margin-top: 50px;
+    text-align: center;
+    justify-content: center;
+}
+

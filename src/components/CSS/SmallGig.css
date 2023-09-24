@@ -1,0 +1,33 @@
+
+.gig {
+    background-color: #575656;
+    border-radius: 15px;
+    border: 3px solid white;
+    max-width: 410px;
+    width: 30%;
+    width: 100%;
+}
+
+.gig img {
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+    max-width: 100%;
+    max-height: 400px;
+
+    overflow: hidden;
+}
+
+.under-image-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 25px 25px;
+}
+
+@media (max-width: 1200px) {
+  
+    .gig img {
+      max-width: 100%; /* Make the image responsive to the container width */
+      height: auto; /* Maintain aspect ratio */
+    }
+  }

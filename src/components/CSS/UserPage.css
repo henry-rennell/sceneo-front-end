@@ -1,0 +1,25 @@
+.page {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.posted-gigs {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    max-width: 85%;
+    gap: 10px;
+    margin: auto;
+    background-color: #212121;
+    border: 1px solid lightgrey;
+    padding: 10px;
+}
+
+
+@media (max-width: 1200px) {
+    .posted-gigs {
+        grid-template-columns: 1fr 1fr;
+
+    }
+
+  }

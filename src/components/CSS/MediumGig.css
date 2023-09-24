@@ -1,0 +1,36 @@
+.medium-gig * {
+    box-sizing: border-box;
+}
+
+
+.medium-gig {
+    max-width: 900px;
+    margin: auto;
+    margin-bottom: 75px;
+    border: 3px solid white;
+    border-radius: 15px;
+}
+
+.medium-gig img {
+    max-width: 875px;
+}
+
+.medium-gig a {
+    text-decoration: none;
+}
+
+.medium-top-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 55px;
+}
+
+.medium-venue-time {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.artists {
+    font-weight: bold;
+}

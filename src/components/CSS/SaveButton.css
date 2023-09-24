@@ -1,0 +1,10 @@
+.save-button {
+    background-color: #74a3ed;
+    border: 1px solid white;
+    border-radius: 15px ;
+    width: 100px;
+}
+
+.saved {
+    background-color: black;
+}
