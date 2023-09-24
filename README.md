@@ -1,70 +1,51 @@
-# Getting Started with Create React App
+# Sceneo-Server
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Welcome to the Sceneo-Server project!
 
-## Available Scripts
+This project is an integral part of Sceneo, a REST API dedicated to providing users with information about upcoming events and gigs in various categories, returning them to the client based on user selected interests.
 
-In the project directory, you can run:
+## Project Overview
 
-### `npm start`
+This App is meant to provide a way for independent musicians to promote their upcoming gigs to music fans who  would be interested, but otherwise would never know of these gigs existence, when creating an account, you list genres that you are interested in and there will be the ability to see all gigs where any of the listed genres matches that of your interests. Down the line i would like to implement a connection between venue accounts and the artists performing to further promote their interactions with eachother to users.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Throughout this project, I have learned many exciting skills, between multiple AWS services, React Contexts and custom hooks.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+I am currently configuring the project to be fully deployed through AWS EC2, AWS Amplify and AWS RDS, The Front end is comprised of ReactJs Code.
 
-### `npm test`
+The Project Has been a bit of a mammoth admitedly, and will never really be finished, but its now at a point where I am comfortable to show it,
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## DataBase Structures:
+Images for this web app are stored on an AWS S3 Bucket thus I have written a number of functions to upload, delete and generate presigned urls for the display of these images. 
+The Structure of the S3 Bucket is as follows:
 
-### `npm run build`
+![Alt Text](./samples/screenshots/S3-bucket.jpg)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+The API also makes use of  PSQL database to store and return objects containing details of each gig, with use of join tables and some more advanced querying using PSQL text[] data types.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+The Schema for this DB is in db/schema.sql
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+## Front End Screenshots
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Home Page
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+![homepage](./samples/screenshots/screenshot-homepage.jpg)
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### Home Page When Logged into your Account
 
-## Learn More
+![Alt text](./samples/screenshots/screenshot-loggedin.jpg)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Search Results:
 
-### Code Splitting
+![search results](./samples/screenshots/screenshot-search-results.jpg)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Analyzing the Bundle Size
+### Profile Page:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+![Alt Text](./samples/screenshots/screenshot-user-page.jpg)
 
-### Making a Progressive Web App
+### Saved Gigs Feature: 
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+![Alt text](./samples/screenshots/screenshot-saved-gigs.jpg)
