@@ -37,7 +37,7 @@ export default function GigPage() {
     }
 
     const handleDelete = () => {
-        axios.delete(`http://localhost:3000/gigs/${data.username}/${data.gig_id}`)
+        axios.delete(`${process.env.API_ENDPOINT}/gigs/${data.username}/${data.gig_id}`)
         navigate(`/user/${session.username}`)
     
     }
@@ -45,7 +45,7 @@ export default function GigPage() {
     const handleDeleteImage = () => {
         setIsImage(false);
         setIsImageDeleted(true)
-        axios.delete(`/images/${editedData.username}/${editedData.gig_id}`)
+        axios.delete(`${process.env.API_ENDPOINT}/images/${editedData.username}/${editedData.gig_id}`)
         navigate('/')
 
     }
@@ -68,23 +68,23 @@ export default function GigPage() {
         setData({...editedData})
         setIsEditing(false)
 
-        axios.put(`/gigs/${editedData.gig_id}/edit`, {...editedData})
+        axios.put(`${process.env.API_ENDPOINT}/gigs/${editedData.gig_id}/edit`, {...editedData})
 
         //calling the api to update the images
-        axios.post(`/images/${editedData.username}/${editedData.gig_id}`, imageFormData)
+        axios.post(`${process.env.API_ENDPOINT}/images/${editedData.username}/${editedData.gig_id}`, imageFormData)
             .then(res => setImageUrl(res.data))
             .then(setIsImage(true))
 
     }
 
     useEffect(()=> {
-        axios.get(`/gigs/${params.gig_id}`)
+        axios.get(`${process.env.API_ENDPOINT}/gigs/${params.gig_id}`)
             .then(res => {
                 setData(res.data[0])
                 return res.data[0]
             })
             .then(gig => {
-                axios.get(`/images/${gig.username}/${gig.gig_id}`).then(res => {
+                axios.get(`${process.env.API_ENDPOINT}/images/${gig.username}/${gig.gig_id}`).then(res => {
                     if(res.data === 'no images') {
                         return
                     } else {

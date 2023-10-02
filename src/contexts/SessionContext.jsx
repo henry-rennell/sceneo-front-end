@@ -10,7 +10,7 @@ export function SessionProvider({ children }) {
     //route to get session data and set session state as that data
     //once ONLY when the component is called
     useEffect(() => {
-         axios.get('/session')
+         axios.get(`${process.env.API_ENDPOINT}/session`)
             .then(res => { 
                 if (res.data.session_id) {
                     setSession(res.data)

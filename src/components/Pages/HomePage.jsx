@@ -14,11 +14,11 @@ export default function HomePage() {
     useEffect(() => {
         //getting data
         if(request === 'default') {
-            axios.get('/gigs/all')
+            axios.get(`${process.env.API_ENDPOINT}/gigs/all`)
             //setting results state with the array of objects returned
             .then(res => setResults(res.data))
         } else if (request === 'interests') {
-            axios.get(`gigs/interests/${session.username}`)
+            axios.get(`${process.env.API_ENDPOINT}/gigs/interests/${session.username}`)
             //setting results state with the array of objects returned
             .then(res => setResults(res.data))
         }

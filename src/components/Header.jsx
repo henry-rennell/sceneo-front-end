@@ -12,7 +12,7 @@ export default function Header() {
     const navigate = useNavigate();
 
     const handleLogOut = () => {
-        axios.delete('/sessions')
+        axios.delete(`${process.env.API_ENDPOINT}/sessions`)
             .then(setSession(null))
             .then(navigate('/'))
     }

@@ -56,10 +56,10 @@ export default function CreateUserPage () {
         fd.append('user_name', accountType === 'artist'? accountData.user_name : null)
         fd.append('interests', accountData.keywords);
 
-        axios.post('/users', fd)
+        axios.post(`${process.env.API_ENDPOINT}/users`, fd)
             .then(res => {
                 if(res.data.response === 200) {
-                    axios.post('/sessions', 
+                    axios.post(`${process.env.API_ENDPOINT}/sessions`, 
                     {
                         username: accountData.username,
                         password: accountData.password

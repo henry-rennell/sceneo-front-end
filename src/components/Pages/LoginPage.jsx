@@ -14,7 +14,7 @@ export default function LoginPage () {
     const handleSubmit = e => {
         e.preventDefault();
         
-        axios.post('/sessions', { username, password })
+        axios.post(`${process.env.API_ENDPOINT}/sessions`, { username, password })
             .then(res => {
                 if (res.data.username) {
                     setSession(res.data)

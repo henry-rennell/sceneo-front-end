@@ -29,7 +29,7 @@ export default function CreateNewGig() {
         fd.append('date', data.date)
         fd.append('username', session.username)
 
-        axios.post('/gigs', fd)
+        axios.post(`${process.env.API_ENDPOINT}/gigs`, fd)
             .then(res => {
                 navigate(`/gigs/${res.data.gig_id}`);
             })

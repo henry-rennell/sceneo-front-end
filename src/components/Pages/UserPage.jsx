@@ -15,7 +15,7 @@ export default function UserPage() {
 
     useEffect(()=> {
         setUserName(params.username)
-        axios.get(`/users/${params.username}`)
+        axios.get(`${process.env.API_ENDPOINT}/users/${params.username}`)
             .then(res => setPosts(res.data))
             .then(setIsLoading(false))
         }, [])

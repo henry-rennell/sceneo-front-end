@@ -40,14 +40,14 @@ export default function SaveButton({gig_id, user_id}) {
 
             //if saved => unsave it
             setIsSaved(false)
-            axios.delete(`/users/saved/${gig_id}/${user_id}`)
+            axios.delete(`${process.env.API_ENDPOINT}/users/saved/${gig_id}/${user_id}`)
 
 
         } else if (!isSaved) {
             //if not saved => save it
             setIsSaved(true);
 
-            axios.post(`/users/saved/${gig_id}/${user_id}`)
+            axios.post(`${process.env.API_ENDPOINT}/users/saved/${gig_id}/${user_id}`)
 
             let newSavedGigs = [...savedGigs, gig_id];
 

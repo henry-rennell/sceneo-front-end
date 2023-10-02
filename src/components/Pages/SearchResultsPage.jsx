@@ -18,7 +18,7 @@ export default function SearchResultsPage () {
             searchTerm = searchTerm.replace(/%2F/g, '/');    
         }
 
-        axios.get(`/gigs/search?${parameter}=${searchTerm}`)
+        axios.get(`${process.env.API_ENDPOINT}/gigs/search?${parameter}=${searchTerm}`)
             .then(res => setResults(res.data))
             .then(setIsLoading(false))
             

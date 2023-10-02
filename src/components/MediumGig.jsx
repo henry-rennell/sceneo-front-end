@@ -10,7 +10,7 @@ export default function MediumGig({ gig }) {
     const { session, setSession } = useContext(SessionContext)
 
     useEffect(() => {
-        axios.get(`image/${gig.username}/${gig.gig_id}`)
+        axios.get(`${process.env.API_ENDPOINT}/image/${gig.username}/${gig.gig_id}`)
             .then(res => {
                 if(res.data === 'no images') {
                     setImageUrl('http://placehold.co/600x400')
