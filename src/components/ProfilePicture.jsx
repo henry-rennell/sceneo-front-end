@@ -8,7 +8,7 @@ export default function ProfilePicture ({ username }) {
     const [url, setUrl] = useState('');
     const navigate = useNavigate();
     useEffect(() => {
-        axios.get(`${process.env.API_ENDPOINT}/image/profile_picture/${username}`)
+        axios.get(`${process.env.REACT_APP_API_ENDPOINT}/image/profile_picture/${username}`)
             .then(res => setUrl(res.data))
     }, [])
 

@@ -14,7 +14,7 @@ export default function SmallGig ({ gig }) {
     //calling the images route to get presignedURL for image
     useEffect(() => {
         //making a request to get the imageURL
-        axios.get(`${process.env.API_ENDPOINT}/image/${gig.username}/${gig.gig_id}`)
+        axios.get(`${process.env.REACT_APP_API_ENDPOINT}/image/${gig.username}/${gig.gig_id}`)
             .then(res => {
                 if(res.data === 'no images') {
                     setImageUrl('https://placehold.co/600x400')

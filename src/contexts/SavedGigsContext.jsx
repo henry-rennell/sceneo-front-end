@@ -11,7 +11,7 @@ export function SavedGigsProvider({ children }) {
 
     useEffect(() => {
         if(session !== null) {
-            axios.get(`${process.env.API_ENDPOINT}/users/saved/${session.user_id}`)
+            axios.get(`${process.env.REACT_APP_API_ENDPOINT}/users/saved/${session.user_id}`)
                 .then(res => {
                     let ids = res.data.map(gig => {
                         return gig.gig_id

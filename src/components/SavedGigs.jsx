@@ -9,7 +9,7 @@ export default function SavedGigs({ user_id }) {
 
 
     useEffect(() => {
-        axios.get(`${process.env.API_ENDPOINT}/users/saved/${user_id}`)
+        axios.get(`${process.env.REACT_APP_API_ENDPOINT}/users/saved/${user_id}`)
             .then(res => setSavedGigs([...res.data]))
 
     }, [])
