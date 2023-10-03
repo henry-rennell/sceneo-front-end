@@ -1,7 +1,7 @@
 # Sceneo-Front-End
 
 Try it out here:
-[Link](http://3.27.88.224/)
+[Link](http://www.sceneo.com.au/)
 
 
 Welcome to the Sceneo-Server project!
