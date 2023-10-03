@@ -1,4 +1,4 @@
-# Sceneo-Server
+# Sceneo-Front-End
 
 Try it out here:
 [Link](http://3.27.88.224/)
