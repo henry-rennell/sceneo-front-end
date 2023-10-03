@@ -1,5 +1,9 @@
 # Sceneo-Server
 
+Try it out here:
+[Link](http://3.27.88.224/)
+
+
 Welcome to the Sceneo-Server project!
 
 This project is an integral part of Sceneo, a REST API dedicated to providing users with information about upcoming events and gigs in various categories, returning them to the client based on user selected interests.
